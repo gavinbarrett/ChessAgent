@@ -10,6 +10,9 @@ class Game {
   	Player* p1;
 	Player* p2;
 	Board* board;
-  	int isOver();
+	int IsOver();
+	void Play();
+	void SwitchPlayer();
+	int currPlayer = 1;
 };
 #endif // GAME_HPP_

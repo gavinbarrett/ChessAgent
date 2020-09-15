@@ -10,11 +10,10 @@ int main() {
 	Board* board = new Board();
 	// create a game
 	Game* game = new Game(p1, p2, board);
-	int x = 0;
-	while (!game->isOver()) {
-		game->board->PrintOut();
-		std::cin >> x;
-	}
+
+	while (!game->IsOver())
+		game->Play();
+	
 	delete game;
 	return 0;
 }

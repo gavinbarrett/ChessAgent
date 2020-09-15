@@ -10,14 +10,14 @@ Board::Board() {
 	this->board[1][2] = 'P'; this->board[1][5] = 'P';
 	this->board[1][3] = 'P'; this->board[1][4] = 'P';
 
-	this->board[7][0] = 'R'; this->board[7][7] = 'R';
-	this->board[7][1] = 'K'; this->board[7][6] = 'K';
-	this->board[7][2] = 'B'; this->board[7][5] = 'B';
-	this->board[7][3] = 'Q'; this->board[7][4] = 'K';
-	this->board[6][0] = 'P'; this->board[6][7] = 'P';
-	this->board[6][1] = 'P'; this->board[6][6] = 'P';
-	this->board[6][2] = 'P'; this->board[6][5] = 'P';
-	this->board[6][3] = 'P'; this->board[6][4] = 'P';
+	this->board[7][0] = '2'; this->board[7][7] = '2';
+	this->board[7][1] = '4'; this->board[7][6] = '4';
+	this->board[7][2] = '3'; this->board[7][5] = '3';
+	this->board[7][3] = '5'; this->board[7][4] = '6';
+	this->board[6][0] = '1'; this->board[6][7] = '1';
+	this->board[6][1] = '1'; this->board[6][6] = '1';
+	this->board[6][2] = '1'; this->board[6][5] = '1';
+	this->board[6][3] = '1'; this->board[6][4] = '1';
 }
 
 Board::~Board() {
