@@ -1,3 +1,4 @@
+#include "Piece.hpp"
 #include "Pawn.hpp"
 #include "Rook.hpp"
 #include "Bishop.hpp"
@@ -5,6 +6,7 @@
 #include "King.hpp"
 #include "Queen.hpp"
 #include <iostream>
+#include <vector>
 
 #ifndef BOARD_HPP_
 #define BOARD_HPP_
@@ -12,16 +14,11 @@ class Board {
   public:
 	Board();
 	~Board();
-  	void PrintOut();
-  	char board[8][8] = {
-		{'*','*','*','*','*','*','*','*'},
-		{'*','*','*','*','*','*','*','*'},
-		{'*','*','*','*','*','*','*','*'},
-		{'*','*','*','*','*','*','*','*'},
-		{'*','*','*','*','*','*','*','*'},
-		{'*','*','*','*','*','*','*','*'},
-		{'*','*','*','*','*','*','*','*'},
-		{'*','*','*','*','*','*','*','*'},
-	};
+  	void Display();
+	int OffBoard(int x1, int y1, int x2, int y2);
+  	int CanMakeMove(int x1, int y1, int x2, int y2);
+	void MakeMove(int x1, int y1, int x2, int y2);
+	std::vector<std::vector<Piece*>> board;
+	int dim;
 };
 #endif // BOARD_HPP_

@@ -1,1 +1,3 @@
 - create an array of allocated pieces for the board object; pass in their initial coords. when we need to move, check if move can be accomplished on the board with the piece indicated. If we do move, update coords and update board
+
+- Finish overriding CanMove function for all pieces

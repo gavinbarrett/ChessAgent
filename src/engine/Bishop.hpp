@@ -3,7 +3,8 @@
 #ifndef BISHOP_HPP_
 #define BISHOP_HPP_
 class Bishop : public Piece {
-	Bishop(int x, int y);
+  public:
+	Bishop(int x, int y, char rep);
 	~Bishop();
 };
 #endif // BISHOP_HPP_

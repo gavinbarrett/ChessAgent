@@ -17,7 +17,7 @@ void Game::Play() {
 	int x = 0;
 	std::vector<int> arrs;
 	std::string str;
-	this->board->PrintOut();
+	this->board->Display();
 
 	std::cout << "\nIt is player " << this->currPlayer << "'s turn.\n"; 
 	getline(std::cin, str);
@@ -29,10 +29,14 @@ void Game::Play() {
 	for (int i = 0; i < static_cast<int>(arrs.size()); i++) {
 		std::cout << arrs[i] << std::endl;
 	}
+	int s = this->board->CanMakeMove(arrs[0], arrs[1], arrs[2], arrs[3]);
+	std::cout << s << std::endl;
+	// switch player for next turn
 	this->SwitchPlayer();
 }
 
 void Game::SwitchPlayer() {
+	// alternate the current player
 	(this->currPlayer == 1) ? (this->currPlayer = 2) : (this->currPlayer = 1);
 }
 
