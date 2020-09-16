@@ -1,6 +1,6 @@
 #include "Queen.hpp"
 
-Queen::Queen(int x, int y, char rep) : Piece(x, y, rep) {}
+Queen::Queen(int x, int y, int owner) : Piece(x, y, 'Q', owner) {}
 
 Queen::~Queen() {}
 

@@ -17,7 +17,7 @@ class Board {
   	void Display();
 	int OffBoard(int x1, int y1, int x2, int y2);
   	int CanMakeMove(int x1, int y1, int x2, int y2);
-	void MakeMove(int x1, int y1, int x2, int y2);
+	void MakeMove(Piece* piece, int new_x, int new_y);
 	std::vector<std::vector<Piece*>> board;
 	int dim;
 };

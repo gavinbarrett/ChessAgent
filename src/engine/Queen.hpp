@@ -4,7 +4,7 @@
 #define QUEEN_HPP_
 class Queen : public Piece {
   public:
-	Queen(int x, int y, char rep);
+	Queen(int x, int y, int owner);
 	~Queen();
 	int CanMove(int x, int y);
 };

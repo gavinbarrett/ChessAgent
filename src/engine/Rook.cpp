@@ -1,6 +1,6 @@
 #include "Rook.hpp"
 
-Rook::Rook(int x, int y, char rep) : Piece(x, y, rep) {}
+Rook::Rook(int x, int y, int owner) : Piece(x, y, 'R', owner) {}
 
 Rook::~Rook() {}
 

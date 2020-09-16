@@ -1,6 +1,6 @@
 #include "King.hpp"
 
-King::King(int x, int y, char rep) : Piece(x, y, 'K') {}
+King::King(int x, int y, int owner) : Piece(x, y, 'K', owner) {}
 
 King::~King() {}
 

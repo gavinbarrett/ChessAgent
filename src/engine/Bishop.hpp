@@ -4,7 +4,7 @@
 #define BISHOP_HPP_
 class Bishop : public Piece {
   public:
-	Bishop(int x, int y, char rep);
+	Bishop(int x, int y, int owner);
 	~Bishop();
 };
 #endif // BISHOP_HPP_

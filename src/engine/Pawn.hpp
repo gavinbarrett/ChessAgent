@@ -4,7 +4,7 @@
 #define PAWN_HPP_
 class Pawn : public Piece {
   public:
-	Pawn(int x, int y, char rep);
+	Pawn(int x, int y, int owner);
 	~Pawn();
 	int CanMove(int x, int y);
 };
