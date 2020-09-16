@@ -11,7 +11,9 @@ class Game {
 	Player* p2;
 	Board* board;
 	int IsOver();
+	void Display();
 	void Play();
+	void PrintPrompt();
 	void SwitchPlayer();
 	int currPlayer = 1;
 };

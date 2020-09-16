@@ -29,7 +29,7 @@ Rook.o: Rook.cpp Rook.hpp
 	$(CC) $(CFLAGS) -c Rook.cpp
 
 Knight.o: Knight.cpp Knight.hpp
-	$(CC) $(CFLAG) -c Knight.cpp
+	$(CC) $(CFLAGS) -c Knight.cpp
 
 King.o: King.cpp King.hpp
 	$(CC) $(CFLAGS) -c King.cpp

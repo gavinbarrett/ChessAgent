@@ -20,10 +20,8 @@ void Game::Play() {
 	int x = 0;
 	std::vector<int> arrs;
 	std::string str;
-	this->board->Display();
 
-	std::cout << "\nIt is player " << this->currPlayer << "'s turn.\n"; 
-
+	this->Display();
 
 	// FIXME: handle user input
 	getline(std::cin, str);
@@ -35,18 +33,31 @@ void Game::Play() {
 	} while(arrs.size() != 4);
 	
 
-
-	int canMove = this->board->CanMakeMove(arrs[0], arrs[1], arrs[2], arrs[3]);
+	// check if move is valid
+	int canMove = this->board->CanMakeMove(this->currPlayer, arrs[0], arrs[1], arrs[2], arrs[3]);
 	
+	// make move if possible
 	if (canMove) {
-		// FIXME: move character on board and update coords
 		std::cout << "Moving\n";
+		// grab the piece 
 		Piece* piece = this->board->board.at(arrs[0]).at(arrs[1]);
-		this->board->MakeMove(piece, arrs[2], arrs[3]);
+		// move the piece
+		this->board->MakeMove(piece, this->currPlayer, arrs[2], arrs[3]);
 	}
 
 	// switch player for next turn
 	this->SwitchPlayer();
+}
+
+void Game::Display() {
+	// print the game board
+	this->board->Display();
+	// print the prompt to the player
+	this->PrintPrompt();
+}
+
+void Game::PrintPrompt() {
+	std::cout << "\nIt is player " << this->currPlayer << "'s turn.\nPlease enter move coordinates.\n"; 
 }
 
 void Game::SwitchPlayer() {

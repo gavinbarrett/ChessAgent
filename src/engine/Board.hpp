@@ -5,6 +5,7 @@
 #include "Knight.hpp"
 #include "King.hpp"
 #include "Queen.hpp"
+#include <cstdio>
 #include <iostream>
 #include <vector>
 
@@ -16,8 +17,8 @@ class Board {
 	~Board();
   	void Display();
 	int OffBoard(int x1, int y1, int x2, int y2);
-  	int CanMakeMove(int x1, int y1, int x2, int y2);
-	void MakeMove(Piece* piece, int new_x, int new_y);
+  	int CanMakeMove(int currPlayer, int x1, int y1, int x2, int y2);
+	void MakeMove(Piece* piece, int currPlayer, int new_x, int new_y);
 	std::vector<std::vector<Piece*>> board;
 	int dim;
 };

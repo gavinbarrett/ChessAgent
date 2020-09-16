@@ -1,8 +1,4 @@
 #include "Piece.hpp"
-#include <iostream>
-#define BLUE    "\033[34m"
-#define GREEN   "\033[32m"
-#define RESET   "\033[0m"
 
 Piece::Piece(int x, int y, char rep, int owner) : coords(x, y), repr(rep), owner(owner) {}
 
@@ -13,7 +9,7 @@ void Piece::Move(int x, int y) {
 }
 
 int Piece::CanMove(int x, int y) {
-	return 0;
+	return 1;
 }
 
 void Piece::PrintPiece() {
@@ -22,13 +18,20 @@ void Piece::PrintPiece() {
 	else if (this-> owner == 2)
 		std::cout << GREEN << this->repr << RESET << " ";
 	else
-		std::cout << this->repr << " ";;
+		std::cout << this->repr << " ";
+}
+
+void Piece::PrintPointer() {
+	// print the piece's memory address
+	printf("%p ", (void*)this);
 }
 
 int Piece::GetX() {
+	// return the piece's x coordinate 
 	return this->coords.first;
 }
 
 int Piece::GetY() {
+	// return the piece's y coordinate
 	return this->coords.second;
 }
