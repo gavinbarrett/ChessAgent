@@ -51,11 +51,10 @@ int Board::CanMakeMove(int currPlayer, int x1, int y1, int x2, int y2) {
 		return 0;
 	// FIXME: check type of piece at coord and see if it can be moved
 	// FIXME: make sure the piece we're moving belongs is owned by the current player
-	std::cout << this->board[x1][y1]->owner << ", " << currPlayer << std::endl;
 	if (this->board[x1][y1]->owner != currPlayer)
 		return 0;
 	// FIXME: take into account whether other pieces are in the way
-	return this->board[x1][y1]->CanMove(x2, y2);
+	return this->board[x1][y1]->CanMove(x2, y2, this->board);
 }
 
 void Board::MakeMove(Piece* piece, int currPlayer, int new_x, int new_y) {

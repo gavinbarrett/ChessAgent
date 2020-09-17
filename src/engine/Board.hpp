@@ -6,8 +6,6 @@
 #include "King.hpp"
 #include "Queen.hpp"
 #include <cstdio>
-#include <iostream>
-#include <vector>
 
 #ifndef BOARD_HPP_
 #define BOARD_HPP_

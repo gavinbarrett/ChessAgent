@@ -1,0 +1,64 @@
+html {
+	width: 100vw;
+	height: 100vh;
+	padding: 0;
+	margin: 0;
+}
+
+body {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 100vw;
+	height: 100vh;
+	padding: 0;
+	margin: 0;
+}
+
+#chessagentboard {
+	display: flex;
+	width: 700px;
+	height: 700px;
+	padding: 0;
+	margin: 0;
+	background: white;
+	justify-content: center;
+	align-items: center;
+}
+
+#board {
+	display: flex;
+	flex-direction: column;
+	width: 700px;
+	height: 700px;
+}
+
+.row {
+	display: flex;
+}
+
+.tile {
+	width: 12vw;
+	height: 12vh;
+	border-style: solid;
+}
+
+.lighttile {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 11vw;
+	height: 11vh;
+	border-style: solid;
+	background: #ffcdb2;
+}
+
+.darktile {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 11vw;
+	height: 11vh;
+	border-style: solid;
+	background: #b5838d;
+}

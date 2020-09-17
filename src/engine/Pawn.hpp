@@ -6,6 +6,7 @@ class Pawn : public Piece {
   public:
 	Pawn(int x, int y, int owner);
 	~Pawn();
-	int CanMove(int x, int y);
+	void AttackMove(Piece* piece, int x, int y, std::vector<std::vector<Piece*>> &board);
+	int CanMove(int x, int y, std::vector<std::vector<Piece*>> &board);
 };
 #endif // PAWN_HPP_

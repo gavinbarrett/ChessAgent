@@ -43,10 +43,11 @@ void Game::Play() {
 		Piece* piece = this->board->board.at(arrs[0]).at(arrs[1]);
 		// move the piece
 		this->board->MakeMove(piece, this->currPlayer, arrs[2], arrs[3]);
+		// switch player for next turn
+		this->SwitchPlayer();
+	} else {
+		std::cout << "Cannot move to specified location.\n";
 	}
-
-	// switch player for next turn
-	this->SwitchPlayer();
 }
 
 void Game::Display() {

@@ -8,8 +8,12 @@ void Piece::Move(int x, int y) {
 	this->coords.first = x; this->coords.second = y;
 }
 
-int Piece::CanMove(int x, int y) {
+int Piece::CanMove(int x, int y, std::vector<std::vector<Piece*>> &board) {
 	return 1;
+}
+
+int Piece::IsEnemy(int thisPiece, int thatPiece) {
+	return ((thisPiece == 1 && thatPiece == 2) || (thisPiece == 2 && thatPiece == 1));
 }
 
 void Piece::PrintPiece() {

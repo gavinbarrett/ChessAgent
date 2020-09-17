@@ -4,22 +4,24 @@ King::King(int x, int y, int owner) : Piece(x, y, 'K', owner) {}
 
 King::~King() {}
 
-int King::CanMove(int x, int y) {
-	if (this->coords.first+1 == x && this->coords.second == y)
+int King::CanMove(int x, int y, std::vector<std::vector<Piece*>> &board) {
+	int px = this->GetX();
+	int py = this->GetY();
+	if (px+1 == x && py == y)
 		return 1;
-	else if (this->coords.first-1 == x && this->coords.second == y)
+	else if (px-1 == x && py == y)
 		return 1;
-	else if (this->coords.first == x && this->coords.second+1 == y)
+	else if (px == x && py+1 == y)
 		return 1;
-	else if (this->coords.first == x && this->coords.second-1 == y)
+	else if (px == x && py-1 == y)
 		return 1;
-	else if (this->coords.first+1 == x && this->coords.second+1 == y)
+	else if (px+1 == x && py+1 == y)
 		return 1;
-	else if (this->coords.first+1 == x && this->coords.second-1 == y)
+	else if (px+1 == x && py-1 == y)
 		return 1;
-	else if (this->coords.first-1 == x && this->coords.second+1 == y)
+	else if (px-1 == x && py+1 == y)
 		return 1;
-	else if (this->coords.first-1 == x && this->coords.second-1 == y)
+	else if (px-1 == x && py-1 == y)
 		return 1;
 	return 0;
 }
